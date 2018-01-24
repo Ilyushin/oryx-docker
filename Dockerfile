@@ -4,11 +4,11 @@ FROM cloudera/quickstart
 
 RUN cd /tmp/
 
-ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/compute-classpath.sh /
-ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/oryx-batch-2.6.0.jar /
-ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/oryx-run.sh /tmp/
-ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/oryx-serving-2.6.0.jar /
-ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/oryx-speed-2.6.0.jar /
+ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/compute-classpath.sh ./
+ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/oryx-batch-2.6.0.jar ./
+ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/oryx-run.sh ./
+ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/oryx-serving-2.6.0.jar ./
+ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/oryx-speed-2.6.0.jar ./
 
 RUN chmod +x /tmp/compute-classpath.sh /tmp/oryx-batch-2.6.0.jar /tmp/oryx-run.sh /tmp/oryx-serving-2.6.0.jar /tmp/oryx-speed-2.6.0.jar
 
