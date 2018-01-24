@@ -24,4 +24,6 @@ EXPOSE 7180
 #Guided tutorial
 EXPOSE 80
 
-CMD /home/cloudera/cloudera-manager --express
+COPY bootstrap.sh /usr/bin/.
+
+ENTRYPOINT ["/usr/bin/bootstrap.sh"]
