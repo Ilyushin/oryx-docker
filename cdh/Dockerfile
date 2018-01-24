@@ -2,7 +2,7 @@ FROM cloudera/quickstart
 
 #RUN /home/cloudera/cloudera-manager --express
 
-COPY ../conf-examples /tmp/
+COPY conf-examples /tmp/
 
 RUN cd /tmp/
 
