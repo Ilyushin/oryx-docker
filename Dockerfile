@@ -25,5 +25,6 @@ EXPOSE 7180
 EXPOSE 80
 
 COPY bootstrap.sh /usr/bin/.
+RUN chmod +x /usr/bin/bootstrap.sh
 
 ENTRYPOINT ["/usr/bin/bootstrap.sh"]
