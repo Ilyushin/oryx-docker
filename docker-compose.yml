@@ -14,7 +14,7 @@ services:
       - "2181:2181"
 
   kafka:
-    image: wurstmeister/kafka
+    image: kafka
     hostname: kafka-host
     links:
       - zookeeper

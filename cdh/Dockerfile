@@ -2,7 +2,7 @@ FROM cloudera/quickstart
 
 #RUN /home/cloudera/cloudera-manager --express
 
-COPY conf-examples /tmp/
+COPY ../conf-examples /tmp/
 
 RUN cd /tmp/
 
@@ -24,7 +24,7 @@ EXPOSE 7180
 #Guided tutorial
 EXPOSE 80
 
-COPY bootstrap.sh /usr/bin/.
+COPY ./bootstrap.sh /usr/bin/.
 RUN chmod +x /usr/bin/bootstrap.sh
 
 ENTRYPOINT ["/usr/bin/bootstrap.sh"]
