@@ -1,0 +1,7 @@
+version: '3'
+services:
+  cluster:
+    image: cdh-oryx
+    ports:
+      - "7180:7180"
+      - "80:80"
