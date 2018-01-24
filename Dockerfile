@@ -1,6 +1,6 @@
 FROM cloudera/quickstart
 
-RUN /home/cloudera/cloudera-manager --express
+#RUN /home/cloudera/cloudera-manager --express
 
 RUN cd /temp/
 
