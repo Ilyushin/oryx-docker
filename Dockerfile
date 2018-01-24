@@ -2,7 +2,7 @@ FROM cloudera/quickstart
 
 #RUN /home/cloudera/cloudera-manager --express
 
-RUN cd /temp/
+RUN cd /tmp/
 
 ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/compute-classpath.sh /
 ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/oryx-batch-2.6.0.jar /
