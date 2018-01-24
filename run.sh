@@ -2,5 +2,5 @@
 
 docker rmi -f cdh-oryx
 docker build -t cdh-oryx ./
-docker-compose up --verbose -d
+docker-compose up -d
 
