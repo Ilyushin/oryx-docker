@@ -25,8 +25,8 @@ Steps for installing Kafka:
     ```
 
 2. After this you can open web interface of Clodera Manager via link http://localhost:7180
-3. On the oppened page need to choose
-
+3. On the oppened page need to choose in the main menu **Parcels**
+![alt] (https://github.com/Ilyushin/oryx-docker/blob/master/images/parcels-button.png)
 
 
 
