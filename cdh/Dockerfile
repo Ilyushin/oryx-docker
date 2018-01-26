@@ -18,6 +18,9 @@ RUN chmod +x ./compute-classpath.sh ./oryx-batch-2.6.0.jar ./oryx-run.sh ./oryx-
 #RUN ./oryx-run.sh speed --conf ./als-example.conf
 #RUN ./oryx-run.sh serving --conf ./als-example.conf
 
+#RUN /usr/bin/docker-quickstart
+#RUN /home/cloudera/cloudera-manager --express
+
 #Cloudera Manager
 EXPOSE 7180
 
