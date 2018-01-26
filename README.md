@@ -28,6 +28,7 @@ Steps for installing Kafka:
 3. On the opened page need to choose at the top of the page **Parcels**
 
 ![img](https://github.com/Ilyushin/oryx-docker/blob/master/images/parcels-button.png)
+
 4. Then need to open **Config** and add URL to Kafka's repository
 
 ![img](https://github.com/Ilyushin/oryx-docker/blob/master/images/parcels_config.png)
