@@ -20,6 +20,7 @@ Steps for installing Kafka:
 1. After running the container you should connect to the container and perform some commands:
 
     ```
+    docker exec -it cdh-oryx /bin/bash
     /usr/bin/docker-quickstart
     /home/cloudera/cloudera-manager --express
     ```
@@ -29,11 +30,15 @@ Steps for installing Kafka:
 
 ![img](https://github.com/Ilyushin/oryx-docker/blob/master/images/parcels-button.png)
 
-4. Then need to open **Config** and add URL to Kafka's repository
+4. Then need to open **Config** and add URL of Kafka's repository
 
 ![img](https://github.com/Ilyushin/oryx-docker/blob/master/images/parcels_config.png)
 
 ![img](https://github.com/Ilyushin/oryx-docker/blob/master/images/parcels_config_rep.png)
+
+5. Download CDH and Kafka
+
+![img](https://github.com/Ilyushin/oryx-docker/blob/master/images/parcels_download.png)
 
 
 
