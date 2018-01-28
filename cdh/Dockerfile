@@ -1,31 +1,35 @@
 FROM cloudera/quickstart
 
-#RUN /home/cloudera/cloudera-manager --express
+RUN touch /var/lib/rpm/*
+RUN yum clean all; \
+yum install -y yum-plugin-ovl; \
+yum install -y wget && \
+yum install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel && \
+yum clean all;
 
-COPY conf-examples /tmp/
+RUN mkdir -p /oryx/
 
-RUN cd /tmp/
+COPY conf-examples /oryx/
 
-ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/compute-classpath.sh ./
-ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/oryx-batch-2.6.0.jar ./
-ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/oryx-run.sh ./
-ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/oryx-serving-2.6.0.jar ./
-ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/oryx-speed-2.6.0.jar ./
+ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/compute-classpath.sh /oryx/
+ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/oryx-batch-2.6.0.jar /oryx/
+ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/oryx-run.sh /oryx/
+ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/oryx-serving-2.6.0.jar /oryx/
+ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/oryx-speed-2.6.0.jar /oryx/
 
-RUN chmod +x ./compute-classpath.sh ./oryx-batch-2.6.0.jar ./oryx-run.sh ./oryx-serving-2.6.0.jar ./oryx-speed-2.6.0.jar
+RUN chmod +x /oryx/compute-classpath.sh /oryx/oryx-batch-2.6.0.jar /oryx/oryx-run.sh /oryx/oryx-serving-2.6.0.jar /oryx/oryx-speed-2.6.0.jar
 
 #RUN ./oryx-run.sh batch --conf ./als-example.conf
 #RUN ./oryx-run.sh speed --conf ./als-example.conf
 #RUN ./oryx-run.sh serving --conf ./als-example.conf
-
-#RUN /usr/bin/docker-quickstart
-#RUN /home/cloudera/cloudera-manager --express
 
 #Cloudera Manager
 EXPOSE 7180
 
 #Guided tutorial
 EXPOSE 80
+
+EXPOSE 8032
 
 COPY ./bootstrap.sh /usr/bin/.
 RUN chmod +x /usr/bin/bootstrap.sh
