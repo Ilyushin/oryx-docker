@@ -30,7 +30,7 @@ Steps for installing Kafka:
 
 ![img](https://github.com/Ilyushin/oryx-docker/blob/master/images/parcels-button.png)
 
-4. Open **Config** and add URL of Kafka's repository
+4. Open **Config** and add URL of Kafka's repository (choose an appropriate version https://www.cloudera.com/documentation/kafka/latest/topics/kafka_packaging.html#concept_fzg_phl_br)
 
 ![img](https://github.com/Ilyushin/oryx-docker/blob/master/images/parcels_config.png)
 
