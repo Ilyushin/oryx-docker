@@ -55,7 +55,7 @@ Steps for installing Kafka:
 12. Service will NOT start (error). Do not navigate away from that screen.
 13. Open another Cloudera Manager in another browser tab. You should now see **Kafka** in the list of Services (red, but it should be there). 
 Click on the Kafka Service and then "Configure".
-14. Search for the **java heap space** Configuration Property. The standard Java Heap Space you'll find already set up should be 50 MBytes. 
+14. Search for the **java heap size** Configuration Property. The standard Java Heap Space you'll find already set up should be 50 MBytes. 
 Put in at least 256 MBytes. The original value is simply not enough.
 15. Now search for the **whitelist** Configuration Property. In the field, put in **(?!x)x** (without the quotation marks). 
 That's a regular expression that does not match anything. Given that apparently a Whitelist is mandatory for the Mirrormaker Service to start.

@@ -19,9 +19,9 @@ ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/oryx-speed-
 
 RUN chmod +x /oryx/compute-classpath.sh /oryx/oryx-batch-2.6.0.jar /oryx/oryx-run.sh /oryx/oryx-serving-2.6.0.jar /oryx/oryx-speed-2.6.0.jar
 
-#RUN ./oryx-run.sh batch --conf ./als-example.conf
-#RUN ./oryx-run.sh speed --conf ./als-example.conf
-#RUN ./oryx-run.sh serving --conf ./als-example.conf
+#RUN ./oryx-run.sh batch --conf ./oryx.conf
+#RUN ./oryx-run.sh speed --conf ./oryx.conf
+#RUN ./oryx-run.sh serving --conf ./oryx.conf
 
 #Cloudera Manager
 EXPOSE 7180
