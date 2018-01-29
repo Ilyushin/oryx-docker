@@ -31,8 +31,8 @@ EXPOSE 80
 
 EXPOSE 8032
 
-RUN /usr/bin/docker-quickstart
-RUN /home/cloudera/cloudera-manager --express
+#RUN /usr/bin/docker-quickstart
+#RUN /home/cloudera/cloudera-manager --express
 
 COPY ./bootstrap.sh /usr/bin/.
 RUN chmod +x /usr/bin/bootstrap.sh
