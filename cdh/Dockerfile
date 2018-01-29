@@ -37,8 +37,8 @@ EXPOSE 4040
 #RUN /usr/bin/docker-quickstart
 #RUN /home/cloudera/cloudera-manager --express
 
-RUN sudo -u hdfs hadoop fs -chmod 777 /user/spark
-RUN sudo -u spark hadoop fs -chmod 777 /user/spark/applicationHistory
+#RUN sudo -u hdfs hadoop fs -chmod 777 /user/spark
+#RUN sudo -u spark hadoop fs -chmod 777 /user/spark/applicationHistory
 
 COPY ./bootstrap.sh /usr/bin/.
 RUN chmod +x /usr/bin/bootstrap.sh
