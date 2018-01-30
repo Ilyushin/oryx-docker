@@ -1,15 +1,20 @@
 FROM cloudera/quickstart
 
 RUN touch /var/lib/rpm/*
+RUN yum update -y;
 RUN yum clean all; \
 yum install -y yum-plugin-ovl; \
 yum install -y wget && \
 yum install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel && \
+yum install -y unzip && \
 yum clean all;
 
-RUN mkdir -p /oryx/
+RUN mkdir -p /oryx/example/data
+RUN mkdir -p /oryx/example/model
 
 COPY conf-examples /oryx/
+COPY ml-100k.zip /oryx/
+RUN unzip /oryx/ml-100k.zip -d /oryx/
 
 ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/compute-classpath.sh /oryx/
 ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/oryx-batch-2.6.0.jar /oryx/
@@ -30,6 +35,9 @@ EXPOSE 7180
 EXPOSE 80
 
 EXPOSE 8032
+
+#tracking URL
+EXPOSE 8088
 
 #Spark web UI
 EXPOSE 4040
