@@ -1,9 +1,9 @@
 FROM cloudera/quickstart
 
 RUN touch /var/lib/rpm/*
-RUN yum update -y;
 RUN yum clean all; \
 yum install -y yum-plugin-ovl; \
+yum update -y; \
 yum install -y wget && \
 yum install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel && \
 yum install -y unzip && \
