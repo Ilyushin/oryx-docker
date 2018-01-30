@@ -13,7 +13,7 @@ RUN mkdir -p /oryx/example/data
 RUN mkdir -p /oryx/example/model
 
 COPY conf-examples /oryx/
-COPY ml-100k.zip /oryx/
+ADD http://files.grouplens.org/datasets/movielens/ml-100k.zip /oryx/
 RUN unzip /oryx/ml-100k.zip -d /oryx/
 
 ADD https://github.com/OryxProject/oryx/releases/download/oryx-2.6.0/compute-classpath.sh /oryx/
